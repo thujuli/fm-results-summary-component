@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
+    <style>
+      @font-face {
+        font-family: "Hanken Grotesk";
+        src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+        font-weight: 500 700 800;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lightRed: "hsl(0, 100%, 67%)",
+              orangeYellow: "hsl(39, 100%, 56%)",
+              greenTeal: "hsl(166, 100%, 37%)",
+              cobaltBlue: "hsl(234, 85%, 45%)",
+              paleBlue: "hsl(221, 100%, 96%)",
+              lightLavender: "hsl(241, 100%, 89%)",
+              darkGrayBlue: "hsl(224, 30%, 27%)",
+              lightSlateBlue: "hsl(252, 100%, 67%)",
+              lightRoyalBlue: "hsl(241, 81%, 54%)",
+              violetBlue: "hsla(256, 72%, 46%, 1)",
+              persianBlue: "hsla(241, 72%, 46%, 0)",
+            },
+            fontFamily: {
+              hanken: ["'Hanken Grotesk'", "san-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="max-w-[1440px] mx-auto flex justify-center items-center min-h-screen"
+    >
+      <div
+        class="flex flex-col bg-white rounded-3xl overflow-hidden shadow-2xl shadow-darkGrayBllue md:flex-row"
+      >
+        <div
+          class="flex flex-col justify-center items-center rounded-3xl px-8 py-9 bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue max-w-[375px]"
+        >
+          <p class="text-lg text-lightLavender font-medium mb-4">Your Result</p>
+          <div
+            class="rounded-full bg-gradient-to-b from-violetBlue to-persianBlue w-32 h-32 flex flex-col items-center justify-center mb-6"
+          >
+            <h2 class="text-white font-bold text-5xl">76</h2>
+            <p class="text-base text-lightLavender font-medium">of 100</p>
+          </div>
+          <h1 class="text-white text-2xl font-medium mb-2">Great</h1>
+          <p class="text-lg text-lightLavender text-center">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div class="rounded-3xl p-7 max-w-[375px] w-full">
+          <h1 class="text-darkGrayBlue mb-5 font-bold text-xl">Summary</h1>
+          <div class="mb-5 flex flex-col gap-y-3 font-medium text-darkGrayBlue">
+            <div
+              class="text-lg flex justify-between p-3 rounded-lg bg-lightRed/10"
+            >
+              <div class="flex gap-x-3 items-center">
+                <img
+                  src="./assets/images/icon-reaction.svg"
+                  alt="Icon"
+                  class="w-5 h-5"
+                />
+                <p class="text-lightRed">Reaction</p>
+              </div>
+              <p>80 <span class="text-lightLavender">/ 100</span></p>
+            </div>
+            <div
+              class="text-lg flex justify-between p-3 rounded-lg bg-orangeYellow/10"
+            >
+              <div class="flex gap-x-3 items-center">
+                <img
+                  src="./assets/images/icon-memory.svg"
+                  alt="Icon"
+                  class="w-5 h-5"
+                />
+                <p class="text-orangeYellow">Memory</p>
+              </div>
+              <p>92 <span class="text-lightLavender">/ 100</span></p>
+            </div>
+            <div
+              class="text-lg flex justify-between p-3 rounded-lg bg-greenTeal/10"
+            >
+              <div class="flex gap-x-3 items-center">
+                <img
+                  src="./assets/images/icon-verbal.svg"
+                  alt="Icon"
+                  class="w-5 h-5"
+                />
+                <p class="text-greenTeal">Verbal</p>
+              </div>
+              <p>61 <span class="text-lightLavender">/ 100</span></p>
+            </div>
+            <div
+              class="text-lg flex justify-between p-3 rounded-lg bg-cobaltBlue/10"
+            >
+              <div class="flex gap-x-3 items-center">
+                <img
+                  src="./assets/images/icon-visual.svg"
+                  alt="Icon"
+                  class="w-5 h-5"
+                />
+                <p class="text-cobaltBlue">Visual</p>
+              </div>
+              <p>72 <span class="text-lightLavender">/ 100</span></p>
+            </div>
+          </div>
+          <button
+            class="bg-darkGrayBlue text-paleBlue w-full rounded-full py-3 font-medium hover:bg-gradient-to-b hover:from-lightSlateBlue hover:to-lightRoyalBlue"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
